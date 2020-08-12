@@ -9,7 +9,7 @@ resource "null_resource" "test" {
     always_run = timestamp()
   }
   provisioner "local-exec" {
-    command = "ls -l *"
+    command = "ls -la *"
   }
 }
 
