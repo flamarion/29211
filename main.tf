@@ -5,12 +5,11 @@ data "archive_file" "lambda_zip" {
 }
 
 data "terraform_remote_state" "flamarion_lab" {
-  backend  = "remote"
-  hostname = "app.terrform.io"
-  token    = "PG7VuF5ybzObkQ.atlasv1.xaFseHG53Sv2vw8m9jrazg5NlQv5jsgkjgV8v7iQQDla3Oqh87AbsZHUsMt6zgEJwWE"
+  backend = "remote"
+  token   = "PG7VuF5ybzObkQ.atlasv1.xaFseHG53Sv2vw8m9jrazg5NlQv5jsgkjgV8v7iQQDla3Oqh87AbsZHUsMt6zgEJwWE"
   config = {
+    hostname     = "app.terraform.io"
     organization = "FlamarionLab"
-
     workspaces = {
       name = "31633"
     }
