@@ -7,7 +7,7 @@ data "archive_file" "lambda_zip" {
 data "terraform_remote_state" "flamarion_lab" {
   backend = "remote"
   config = {
-    token        = "PG7VuF5ybzObkQ.atlasv1.xaFseHG53Sv2vw8m9jrazg5NlQv5jsgkjgV8v7iQQDla3Oqh87AbsZHUsMt6zgEJwWE"
+    
     hostname     = "app.terraform.io"
     organization = "FlamarionLab"
     workspaces = {
