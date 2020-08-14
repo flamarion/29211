@@ -34,5 +34,5 @@ output "path" {
 }
 
 output "flamarion_lab_org_output" {
-  value = data.terraform_remote_state.flamarion_lab.master
+  value = data.terraform_remote_state.flamarion_lab.outputs.master
 }
