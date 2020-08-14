@@ -1,12 +1,13 @@
 data "archive_file" "lambda_zip" {
-  type = "zip"
+  type        = "zip"
   source_file = "${path.module}/lambda/xpto.py"
   output_path = "${path.module}/lambda/xpto.zip"
 }
 
 data "terraform_remote_state" "flamarion_lab" {
-  backend = "remote"
-  #token = "PG7VuF5ybzObkQ.atlasv1.xaFseHG53Sv2vw8m9jrazg5NlQv5jsgkjgV8v7iQQDla3Oqh87AbsZHUsMt6zgEJwWE"
+  backend  = "remote"
+  hostname = "app.terrform.io"
+  token    = "PG7VuF5ybzObkQ.atlasv1.xaFseHG53Sv2vw8m9jrazg5NlQv5jsgkjgV8v7iQQDla3Oqh87AbsZHUsMt6zgEJwWE"
   config = {
     organization = "FlamarionLab"
 
