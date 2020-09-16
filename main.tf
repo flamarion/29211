@@ -4,17 +4,17 @@ data "archive_file" "lambda_zip" {
   output_path = "${path.module}/lambda/xpto.zip"
 }
 
-data "terraform_remote_state" "flamarion_lab" {
-  backend = "remote"
-  config = {
+# data "terraform_remote_state" "flamarion_lab" {
+#   backend = "remote"
+#   config = {
     
-    hostname     = "app.terraform.io"
-    organization = "FlamarionLab"
-    workspaces = {
-      name = "31633"
-    }
-  }
-}
+#     hostname     = "app.terraform.io"
+#     organization = "FlamarionLab"
+#     workspaces = {
+#       name = "31633"
+#     }
+#   }
+# }
 
 resource "null_resource" "test" {
   triggers = {
@@ -33,6 +33,6 @@ output "path" {
   value = data.archive_file.lambda_zip.output_path
 }
 
-output "flamarion_lab_org_output" {
-  value = data.terraform_remote_state.flamarion_lab.outputs.master
-}
+# output "flamarion_lab_org_output" {
+#   value = data.terraform_remote_state.flamarion_lab.outputs.master
+# }
