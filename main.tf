@@ -16,8 +16,6 @@ data "archive_file" "lambda_zip" {
 #   }
 # }
 
-# Another cool thing
-
 resource "null_resource" "test" {
   triggers = {
     always_run = timestamp()
