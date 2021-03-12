@@ -16,7 +16,6 @@ data "archive_file" "lambda_zip" {
 #   }
 # }
 
-# Another cool thing
 
 resource "null_resource" "test" {
   triggers = {
@@ -35,6 +34,3 @@ output "path" {
   value = data.archive_file.lambda_zip.output_path
 }
 
-# output "flamarion_lab_org_output" {
-#   value = data.terraform_remote_state.flamarion_lab.outputs.master
-# }
